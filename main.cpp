@@ -67,6 +67,11 @@ namespace sh
 
         void changeColor()
         {
+            sf::Color newColor = sf::Color(rand() % 200 + 55, rand() % 200 + 55, rand() % 200 + 55);
+            while (newColor == this->shape->getFillColor())
+            {
+                newColor = sf::Color(rand() % 200 + 55, rand() % 200 + 55, rand() % 200 + 55);
+            }
             this->shape->setFillColor(sf::Color(rand() % 200 + 55, rand() % 200 + 55, rand() % 200 + 55));
         }
 
